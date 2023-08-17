@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,700;0,800;0,900;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,500&display=swap');
+/*@import nos trae información, la url de google fonts trae la faminia "Besley" para usar en el documento pero no se aplica hasta que apliquemos "font-family" en algún lugar de nuestro archivo .css*/
+
+* {
+	font-family: 'Besley', serif;
+	padding: 0;
+	margin: 0;
+} /*el asterisco siempre nos va a afectar a TODO el html, o sea que lo que acá dice es "quiero que toda mi página se vea con esta fuente y le quites margen y padding a todo"*/
+
+/*HEADER*/
+
+header {
+	height: 700px;
+	background-image: url("img/fondo-header.png"); /*esta es la imágen de fondo del header*/
+	background-repeat: repeat; /*repetimos la imagen de fondo para hacer un patrón*/
+	padding: 0 0 0 100px; /*esto nos aleja el CONTENIDO que está dentro de nuestra etiqueta <header>, prueben qué pasa si reemplazan padding por margin. El orden de los números afecta a lados puntuales: top, right, bottom y left, o sea que acá decimos "quiero que el padding sea de cero arriba, cero a la derecha, cero abajo y cien píxeles a la izquierda. La unidad cero es universal en todos los sistemas de medida, por eso no es necesario agregarle una unidad de medida, pero los demás valores no se toman si no agregamos una unidad, en este caso "px"*/
+}
+
+#foto-perfil {
+	margin: 100px 0 0 40px; /*visualmente acá margin y padding funcionan igual, acá buscamos que nuestra caja entera tenga un margen. Acá decimos "quiero un margen de cien píxeles arriba, ceto a la derecha, cero abajo y cuarenta píxeles a la izquierda"*/
+} 
+
+#titulo-principal {
+	color: #fd951f;
+} /*color siempre afecta a la fuente*/
+
+
+h1 {
+	font-weight: 900; /*determina la variable de la fuente elegida cuando la importamos de google fonts*/
+	font-size: 110px; /*determina el tamaño del texto, existen otras unidades de medida más pertinentes para tamaños de texto, si se confunden sigan con píxeles pero si quieren busquen más*/
+	display: inline; /*nos alinea este y todos los objetos que tenga inmediatamente a continuación que también tengan la propiedad inline*/
+	padding-right: 10px;
+}
+
+h2 {
+	font-weight: 400;
+	font-style: italic;
+	display: inline; /*repetimos inline para que se alinee con el anterior, en este caso <h1>*/
+}
+
+#caja-de-datos {
+	background-color: #6d8e13;
+	color: white;
+	width: 700px;
+	border-radius: 10px;
+}
+
+/*Podríamos escribir también "header ul {}"" pero nos traería problemas si agregamos otro <ul> y queremos que tenga estilos distintos porque nos afectaría a todos los <ul> que haya en el header, siempre es importante que sepamos diferenciar lo general de lo particular y en qué caso aplicarlos*/
+
+#caja-de-datos ul{ 
+	padding: 20px 0 20px 20px;
+}
+
+#caja-de-datos ul li { 
+	padding-left: 20px;
+	font-weight: 600;
+	list-style: none; /*nos quita el tipo de item que tienen los list items*/
+}
+
+#caja-de-datos span {
+	font-weight: 400;
+	font-style: italic;
+} /*en el html agregamos una etiqueta span para poder modificar un estilo particular sin cambiar la jerarquía de la etiqueta*/
+
+/*MAIN*/
+
+main {
+	padding: 0 0 50px 100px;
+	width: 800px;
+} /*Decimos "quiero que todo el CONTENIDO del main tenga este padding y este ancho fijo*/
+
+h3 {
+	color: #fd951f;
+	font-size: 30px;
+	font-weight: 800;
+}
+
+/*uso de un id: quiero que puntualmente cada sutítulo o <h3> tenga colores distintos cuando paso el mouse por encima (hover)*/
+#sobre_mi h3:hover {
+	color: fuchsia;
+	font-family: 'Roboto', sans;
+}
+
+#estudios h3:hover {
+	color: deeppink;
+}
+
+#experiencia h3:hover {
+	color: red;
+}
+
+.bloque_info li{
+	padding: 0 0 0 30px;
+	list-style: none;
+}
+
+/*FOOTER*/
+
+footer {
+	background-color: #5c3ccb;
+	color: white;
+}
+
+footer p, footer img {
+	padding: 10px 0 0 50px;
+}
